@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import { Layout, Row } from 'antd'
 
-import Header from '../Header'
-import Repos from '../Repos'
-import About from '../About'
+import Header from '../../containers/Header'
+import Repos from '../../containers/Repos'
+import About from '../../containers/About'
 
 const { Content } = Layout
 

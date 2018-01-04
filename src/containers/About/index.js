@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { Col } from 'antd'
+import { Col, Card } from 'antd'
 
 export default class extends PureComponent {
   static displayName = 'About'
@@ -8,7 +8,11 @@ export default class extends PureComponent {
 
   render() {
     return (
-      <Col span={12}>About</Col>
+      <Col span={12}>
+        <Card>
+          About
+        </Card>
+      </Col>
     )
   }
 }
