@@ -14,11 +14,11 @@ export default () => store => next => async (action) => {
     case REPOS_FETCH:
       next(action)
       try {
-        const { data } = await axios.get(`${config.API_URL}/users/${action.payload.user}/repos`)
+        const { data } = await axios.get(`${config.API_URL}/users/${action.payload.username}/repos`)
 
-        store.dispatch(addRepos(action.payload.user, data))
+        store.dispatch(addRepos(action.payload.username, data))
       } catch (err) {
-        store.dispatch(errorRepos(action.payload.user, err.message))
+        store.dispatch(errorRepos(action.payload.username, err.message))
       }
       break
     default:

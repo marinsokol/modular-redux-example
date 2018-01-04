@@ -4,25 +4,25 @@ import {
   REPOS_ERROR
 } from './constants'
 
-export const fetchRepos = user => ({
+export const fetchRepos = username => ({
   type: REPOS_FETCH,
   payload: {
-    user
+    username
   }
 })
 
-export const addRepos = (user, repos) => ({
+export const addRepos = (username, repos) => ({
   type: REPOS_ADD,
   payload: {
-    user,
+    username,
     repos
   }
 })
 
-export const errorRepos = (user, error) => ({
+export const errorRepos = (username, error) => ({
   type: REPOS_ERROR,
   payload: {
-    user,
+    username,
     error
   }
 })
