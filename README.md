@@ -4,7 +4,7 @@ This is example app built as follow up to [this blog post](https://medium.com/@m
 
 ## INSTALATION AND RUNNING
 ```bash
-$ git clone url <my-project-name>
+$ git clone git@github.com:marinsokol/modular-redux-example.git <my-project-name>
 $ cd <my-project-name>
 $ yarn # or npm install
 $ yarn start # or npm start
