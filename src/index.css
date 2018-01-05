@@ -6,6 +6,16 @@ body {
   font-family: sans-serif;
 }
 
+.ant-layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ant-input-search {
+  width: 85%;
+}
+
 .ant-col-12 {
   padding-top: 20px;
   min-height: 100vh;

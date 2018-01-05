@@ -3,7 +3,7 @@ import { Layout, Row } from 'antd'
 
 import Header from '../../containers/Header'
 import Repos from '../../containers/Repos'
-import About from '../../containers/About'
+import SelectedRepo from '../../containers/SelectedRepo'
 
 const { Content } = Layout
 
@@ -19,7 +19,7 @@ export default class extends PureComponent {
         <Content>
           <Row>
             <Repos />
-            <About />
+            <SelectedRepo />
           </Row>
         </Content>
       </Layout>

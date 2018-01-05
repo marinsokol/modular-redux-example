@@ -12,9 +12,12 @@ export const fetchSelectedRepo = (username, url) => ({
   }
 })
 
-export const addSelectedRepo = repo => ({
+export const addSelectedRepo = (url, repo) => ({
   type: SELECT_REPO_ADD,
-  payload: repo
+  payload: {
+    data: repo,
+    url
+  }
 })
 
 

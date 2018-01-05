@@ -1,8 +1,12 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import {
+  string,
+  func
+} from 'prop-types'
 import {
   Layout,
-  Input
+  Input,
+  Avatar
 } from 'antd'
 
 const { Header } = Layout
@@ -12,7 +16,8 @@ export default class extends PureComponent {
   static displayName = 'Header'
 
   static propTypes = {
-    fetchRepos: PropTypes.func.isRequired
+    avatarUrl: string.isRequired,
+    fetchRepos: func.isRequired
   }
 
   state = {}
@@ -20,8 +25,10 @@ export default class extends PureComponent {
   handleSearch = value => this.props.fetchRepos(value)
 
   render() {
+    const { avatarUrl } = this.props
     return (
       <Header>
+        <Avatar src={avatarUrl} />
         <Search
           enterButton
           placeholder="Enter GitHub username"

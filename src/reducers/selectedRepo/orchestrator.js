@@ -13,7 +13,7 @@ export default () => store => next => async (action) => {
       try {
         const { data } = await axios.get(`${action.payload.url}`)
 
-        store.dispatch(addSelectedRepo(data))
+        store.dispatch(addSelectedRepo(action.payload.url, data))
       } catch (err) {
         store.dispatch(errorSelectedRepo(action.payload.url, err.message))
       }

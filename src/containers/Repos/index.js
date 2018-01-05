@@ -1,12 +1,13 @@
 import { connect } from 'react-redux'
 
-import Repos from './components/Repos.components'
+import Repos from './components/Repos.component'
 
 import { fetchSelectedRepo } from '../../reducers/selectedRepo/actions'
 
 const mapStateToProps = state => ({
-  repos: state.repos.repos,
-  username: state.repos.username
+  repos: state.repos.data,
+  username: state.repos.username,
+  loading: state.repos.loading
 })
 
 const mapDispatchToProps = dispatch => ({
