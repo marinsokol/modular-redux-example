@@ -25,7 +25,6 @@ export default class extends PureComponent {
     }).isRequired
   }
 
-
   state = {}
 
   render() {

@@ -71,13 +71,11 @@ export default class extends PureComponent {
 
     return (
       <Col span={12}>
-        {repos.map(({
- id, name, language, url
-}) => (
-  <Card key={id} onClick={() => this.handleSelectRepo(url)}>
-    <div>{name}</div>
-    <div>{language}</div>
-  </Card>
+        {repos.map(({ id, name, language, url }) => (
+          <Card key={id} onClick={() => this.handleSelectRepo(url)}>
+            <div>{name}</div>
+            <div>{language}</div>
+          </Card>
         ))}
       </Col>
     )

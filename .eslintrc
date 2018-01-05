@@ -20,6 +20,7 @@
     "max-len": ["warn", 160],
     "comma-dangle": ["error", "never"],
     "function-paren-newline": "off",
+    "object-curly-newline": "off",
 
     "no-bitwise": "off",
     "no-underscore-dangle": "off",
