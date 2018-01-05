@@ -15,7 +15,7 @@ export const addRepos = (username, repos) => ({
   type: REPOS_ADD,
   payload: {
     username,
-    repos
+    data: repos
   }
 })
 
