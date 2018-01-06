@@ -50,6 +50,7 @@ Repos.propTypes = {
 
 const mapStateToProps = state => ({
   repos: state.repos.data,
+  username: state.repos.username,
   loading: state.repos.loading
 })
 
