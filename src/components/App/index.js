@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import { Layout, Row } from 'antd'
 
-import Header from '../../containers/Header'
+import SearchBar from '../../containers/SearchBar'
 import Repos from '../../containers/Repos'
 import SelectedRepo from '../../containers/SelectedRepo'
 
@@ -15,7 +15,7 @@ export default class extends PureComponent {
   render() {
     return (
       <Layout>
-        <Header />
+        <SearchBar />
         <Content>
           <Row>
             <Repos />
