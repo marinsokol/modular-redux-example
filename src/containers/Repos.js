@@ -16,6 +16,8 @@ import {
 
 import { fetchSelectedRepo } from '../reducers/selectedRepo/actions'
 
+import SingleRepo from '../components/SingleRepo'
+
 const Repos = ({ repos, loading, username, selectRepo }) => (
   <Col span={12}>
     {loading ? (
@@ -26,17 +28,21 @@ const Repos = ({ repos, loading, username, selectRepo }) => (
       </Card>
     ) : null}
     {(!loading && repos.length) ? repos.map(({ id, name, language, url }) => (
-      <Card key={id} onClick={() => selectRepo(username, url)}>
-        <div>{name}</div>
-        <div>{language}</div>
-      </Card>
+      <SingleRepo
+        key={id}
+        username={username}
+        name={name}
+        language={language}
+        url={url}
+        selectRepo={selectRepo}
+      />
     )) : (<Card> User doesnt have any repos </Card>)}
   </Col>
 )
 
 Repos.propTypes = {
-  username: string.isRequired, // eslint-disable-line react/no-typos
-  loading: bool.isRequired, // eslint-disable-line react/no-typos
+  username: string.isRequired,
+  loading: bool.isRequired,
   repos: arrayOf(
     shape({
       name: string,
@@ -45,7 +51,7 @@ Repos.propTypes = {
       id: number
     })
   ).isRequired,
-  selectRepo: func.isRequired // eslint-disable-line react/no-typos
+  selectRepo: func.isRequired
 }
 
 const mapStateToProps = state => ({

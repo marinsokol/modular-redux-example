@@ -36,7 +36,7 @@ const SelectedRepo = ({ loading, repo }) => (
 )
 
 SelectedRepo.propTypes = {
-  loading: bool.isRequired, // eslint-disable-line react/no-typos
+  loading: bool.isRequired,
   repo: shape({
     name: string,
     language: string,

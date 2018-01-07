@@ -27,8 +27,8 @@ const SearchBar = ({ avatarUrl, searchRepos }) => (
 )
 
 SearchBar.propTypes = {
-  avatarUrl: string.isRequired, // eslint-disable-line react/no-typos
-  searchRepos: func.isRequired // eslint-disable-line react/no-typos
+  avatarUrl: string.isRequired,
+  searchRepos: func.isRequired
 }
 
 const mapStateToProps = state => ({

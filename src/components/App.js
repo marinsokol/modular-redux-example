@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import { Layout, Row } from 'antd'
 
-import SearchBar from '../../containers/SearchBar'
-import Repos from '../../containers/Repos'
-import SelectedRepo from '../../containers/SelectedRepo'
+import SearchBar from '../containers/SearchBar'
+import Repos from '../containers/Repos'
+import SelectedRepo from '../containers/SelectedRepo'
 
 const { Content } = Layout
 
