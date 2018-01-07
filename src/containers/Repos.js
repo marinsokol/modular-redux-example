@@ -25,7 +25,7 @@ const Repos = ({ repos, loading, username, selectRepo }) => (
         </Spin>
       </Card>
     ) : null}
-    {repos.length ? repos.map(({ id, name, language, url }) => (
+    {(!loading && repos.length) ? repos.map(({ id, name, language, url }) => (
       <Card key={id} onClick={() => selectRepo(username, url)}>
         <div>{name}</div>
         <div>{language}</div>
